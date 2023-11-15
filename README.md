@@ -1,4 +1,4 @@
-# Atividade Práticas de Engenharia de Software
+# Atividades Práticas de Engenharia de Software
 
 ## Qualidade de Software
 
