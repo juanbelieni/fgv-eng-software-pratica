@@ -1,5 +1,40 @@
 import re
 
+class CFPValidator:
+    def __init__(self, cpf):
+        self.cpf = self._standardize_cpf(cpf)
+    
+    def _standardize_cpf(self, cpf):
+        return re.sub(r"[^0-9]", "", cpf)
+    
+    def _sum_of_products(self, cpf, digit:int=1):
+        sum_of_products, i = 0, 9 + digit
+        for number in cpf[:8+digit]:
+            sum_of_products += int(number) * i 
+            i -= 1
+            print(sum_of_products)
+        return sum_of_products
+    
+    def _expected_digits(self, cpf, digit:int=1):
+        mod = self._sum_of_products(cpf, digit) % 11
+        print(mod)
+        print(0 if mod < 2 else 11 - mod)
+        return 0 if mod < 2 else 11 - mod
+    
+    def validator_digit(self):
+        if self._expected_digits(self.cpf) == int(self.cpf[9]) and self._expected_digits(self.cpf, 2) == int(self.cpf[10]):
+            return True
+        else:
+            return False
+    
+if __name__ == "__main__":
+    cpf = input("Formato para inserir CPF - XXX.XXX.XXX-XX: ")
+    cpf_validator = CFPValidator(cpf)
+    print(cpf_validator.validator_digit())
+
+
+"""import re
+
 cpf_fornecido = input("Formato para inserir CPF - XXX.XXX.XXX-XX: ")
 cpf_tratado = re.sub(r"[^0-9]", "", cpf_fornecido)
 
@@ -41,4 +76,4 @@ else:
     if (int(cpf_tratado[9]) == digito_verificador_1) and (int(cpf_tratado[10]) == digito_verificador_2):
         print("CPF é válido")
     else:
-        print("CPF inválido")
+        print("CPF inválido")"""
