@@ -2,9 +2,9 @@
 
 ## Qualidade de Software
 
-**Questào 1 (5 pontos)**: o grupo deve refatorar o código apresentado com foco na clareza e organização. O paradigma de OO deve ser utilizado, incluindo o Single-responsibility principle e o Open–closed principle.
+**Questão 1 (5 pontos)**: o grupo deve refatorar o código apresentado com foco na clareza e organização. O paradigma de OO deve ser utilizado, incluindo o Single-responsibility principle e o Open–closed principle.
 
-**Questào 2 (5 pontos)**: elabore uma suíte de testes unitários com base nas técnicas apresentadas em aula e descritas no material enviado. Cobertura mínima de 90%.
+**Questão 2 (5 pontos)**: elabore uma suíte de testes unitários com base nas técnicas apresentadas em aula e descritas no material enviado. Cobertura mínima de 90%.
 
 Código original:
 
