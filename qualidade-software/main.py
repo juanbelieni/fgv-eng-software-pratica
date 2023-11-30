@@ -7,7 +7,7 @@ class Validator(ABC):
     def validate(self, value) -> bool: ...
 
 
-class CFPValidator(Validator):
+class CPFValidator(Validator):
     def __standardize_cpf(self, cpf):
         return re.sub(r"[^0-9]", "", cpf)
 
@@ -48,5 +48,5 @@ class CFPValidator(Validator):
 
 if __name__ == "__main__":
     cpf = input("Formato para inserir CPF - XXX.XXX.XXX-XX: ")
-    cpf_validator = CFPValidator()
+    cpf_validator = CPFValidator()
     print(cpf_validator.validate(cpf))
