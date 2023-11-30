@@ -54,3 +54,11 @@ else:
     else:
         print("CPF inválido")
 ```
+
+## Como Executar:
+
+Para executar o código usamos três comandos:
+
+* `make run`: Executa o script main.py.
+* `make test`: Roda os testes do arquivo test.py.
+* `make coverage`: Exibe a cobertura de testes.
